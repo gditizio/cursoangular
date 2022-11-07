@@ -1,0 +1,24 @@
+<p>Nombre del Empleado: {{nombre}}</p>
+<p>Apellido del Empleado: {{apellido}}</p>
+<p>Edad del Empleado: {{getEdad() - 2022}}</p>
+<p>Empresa del Empleado: {{empresa}}</p>
+<p>Años de Servicio: {{anosservicio}} {{anosservicio>5 ? "Antiguo":"Nuevo"}}</p>
+
+Introduce el departamento <input type="text" #dpto>
+
+    <input type="button" value="Dale!" (click)="indicaDpto(dpto.value)"/>
+
+<p>Departamento de trabajo: {{dpto.value}}</p>
+<p>Quien es tu Supervisor: {{supervisor.value}}</p>
+
+Introduce el supervisor <input type="text" #supervisor (keyup)="0" [disabled]="dptoProperty">
+
+<p>{{textoContratado}}</p>
+<p>Usuario Contratado: <input type="checkbox" id="contratadoId" #contratado [checked]="contratadoProperty"
+    (click)="setContratoUsuario()"></p>
+
+{{getContratoUsuario()}}
+
+<p>Sexo:</p>
+Masculino<input type="radio" name="sexo" id="sexoId">
+Femenino<input type="radio" name="sexo" id="sexoId">
